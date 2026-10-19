@@ -1,4 +1,4 @@
-# NLRB Election Reports, 1968–2000
+# NLRB Election Reports, 1968–2011
 
 Scans of the National Labor Relations Board's monthly *N.L.R.B. Election Report: Cases Closed*
 (compiled by the NLRB Division of Administration), a U.S. government publication in the public
@@ -20,7 +20,7 @@ not available from the case-level microdata before 1984.
 
 ## Contents
 
-`pdfs/` holds 46 files: single issues (`ER###.pdf`) and library-bound volumes of several issues
+`pdfs/` holds 47 files: single issues (`ER###.pdf`) and library-bound volumes of several issues
 (`ER###-###.pdf`). `manifest.csv` lists, for each file, the issues it contains, the months of cases
 closed, page count, holding library, HathiTrust and Google Books identifiers, and a SHA-256
 checksum.
@@ -32,6 +32,7 @@ Issue numbers run one per month (ER-121 = cases closed December 1971), so the mo
 |---|---|
 | 1968–1980 | Issues carrying six-month summaries (Jul–Dec / Jan–Jun through 1976; then Oct–Mar / Apr–Sep), plus the July–September 1976 transition-quarter summary: ER-85, 115, 121, 133, 139, 145, 169, 175, 178, 184, 190, 196, 202, 208, 214, 220 |
 | May 1980 – June 2000 | Every issue, ER-222 to ER-463, mostly as bound volumes |
+| January 2001 – 2011 | Every issue, as born-digital PDFs from nlrb.gov, in `pdfs_nlrb_gov/` (the incumbent table ends in March 2011) |
 
 **Not here:** ER-221 (April 1980); the 1968–1980 monthly issues between summaries (on HathiTrust
 but not downloaded); and the issues HathiTrust does not have — ER-87–109 (February 1969 – December
@@ -40,12 +41,15 @@ Archives holds the full paper run, October 1961 – 2000, unscanned, in Record G
 [7359690](https://catalog.archives.gov/id/7359690) (1961–1987) and
 [7422821](https://catalog.archives.gov/id/7422821) (1988–2000).
 
+See [CODEBOOK.md](CODEBOOK.md) for definitions and known problems — in particular, the incumbent
+counts depend on regional office coding practice and are not consistent over time.
+
 ## Extracted data
 
 `data/` holds the collective-bargaining summary tables transcribed from these PDFs:
 
 - `data/election_report_periods.csv` — one row per non-overlapping period (six-month or
-  transition-quarter summaries where printed, single months otherwise), July 1968 – June 2000, with
+  transition-quarter summaries where printed, single months otherwise), July 1968 – March 2011, with
   totals and one-union subtotals for all collective-bargaining elections (`all_*`, Table 1), elections
   involving an incumbent union (`inc_*`, Table 3), and new organizing (`new_*`, Table 7, or Table 1
   minus Table 3 where Table 7 isn't printed). Measures are elections (`_n`), elections won (`_won`),
