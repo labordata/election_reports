@@ -61,6 +61,10 @@ counts depend on regional office coding practice and are not consistent over tim
   misprints, corrected reissues, and rows rebuilt from monthly tables where summary pages are missing
   from the scans.
 
+- `data/krislov_1967.csv`, `data/krislov_1970.csv` — Joseph Krislov's published NLRB series of
+  elections in units with no prior bargaining agent, FY1955–1966 and FY1949–1966, which precede the
+  Election Report summaries (figures only; see the codebook for citations).
+
 `scripts/combine.py` rebuilds the two combined files from `data/extracted/`.
 
 Every figure was read from the page images and checked against the tables' own arithmetic (subtotals

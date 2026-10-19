@@ -13,6 +13,8 @@ codebook documents what the numbers mean and where they are unreliable.
 | `data/extracted/*.md` | transcription notes for each block: page locations, misprints, OCR corrections, reissues |
 | `data/alternate_google_copies.csv` | other Google Books scans of the same issues (not used, except as noted) |
 | `manifest.csv` | the PDFs in `pdfs/`, with issue numbers, months, holding library, identifiers, checksums |
+| `data/krislov_1967.csv` | fiscal year, FY1955–1966: Krislov's new-organizing series (see below) |
+| `data/krislov_1970.csv` | fiscal year, FY1949–1966: Krislov's employees in new units choosing a union, by industry |
 
 `scripts/combine.py` builds the two combined files from `data/extracted/`.
 
@@ -166,7 +168,29 @@ compiled later and probably include late certifications.
 A few very large elections move half-year figures. Example: an 18,200-eligible three-union election in
 Oct 1983–Mar 1984, counted as new organizing.
 
-## Continuity with Krislov (1967)
+## Krislov's series, FY1949–1966
+
+Two files hold the figures Joseph Krislov published from NLRB special tabulations of its punched-card
+records of representation petitions, from which "election cards in which the petition indicated
+existence of a prior bargaining agent were eliminated." They are transcribed as printed, with the same
+column names as the Election Report data:
+
+- `data/krislov_1967.csv` — FY1955–1966: all representation elections excluding decertifications
+  (`all_n`, `all_elig`), and new-organizing elections, wins, eligible employees, and eligible employees
+  in units won (`new_n`, `new_won`, `new_elig`, `new_elig_won`). From "Union Organizing of New Units,
+  1955–1966," *Industrial and Labor Relations Review* 21(1), 1967, pp. 34–35.
+- `data/krislov_1970.csv` — FY1949–1966: employees in new units choosing a union (`new_elig_won`), in
+  total and for manufacturing, trade, and services. From "Organizing, Union Growth, and the Cycle,
+  1949–1966," *Labor History* 11(2), 1970, Table I.
+
+The two agree exactly on `new_elig_won` for FY1955–1966. Krislov's `all_n` equals the Annual Reports'
+RC + RM election counts through FY1964; FY1965 is 200 higher (7,776 vs. 7,576) and FY1966 92 lower
+(8,011 vs. 8,103), the latter probably because the Annual Reports switched to counting cases closed.
+
+The definition differs slightly from the Election Reports': Krislov drops elections whose *petition*
+named a prior bargaining agent; the Election Reports drop elections *involving an incumbent union*.
+
+## Continuity with Krislov
 
 Joseph Krislov, "Union Organizing of New Units, 1955–1966" (*ILR Review* 21, 1967), reports the same
 concept for FY1955–1966 from NLRB punched-card tabulations: elections in which "the petition indicated
